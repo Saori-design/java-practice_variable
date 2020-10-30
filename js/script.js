@@ -129,13 +129,15 @@ areaOfCircle(2)
 //      3. Calculate the area of a circle with the result of #2 as the radius.   
 //      4. Calculate what percentage that area (#3) is of the squared result (#2).
 
+console.log(`All function`)
+function allFunctions(num) {
+    console.log(`percentOf`)
 
-function runAll(num) {
-    let half = halfOf(num)
+    let half = halfNumber(num)
     let squared = squareNumber(half)
     let area = areaOfCircle(squared)
     let result = percentOf (squared, area)
+    return percentOf
 }
 
-runAll(10)
-console.log(`The percent is ${result}%`)
+allFunctions(30)
