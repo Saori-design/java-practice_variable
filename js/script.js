@@ -138,4 +138,4 @@ function runAll(num) {
 }
 
 runAll(10)
-console.log(`The percent is ${result}%.`)
+console.log(`The percent is ${result}%`)
