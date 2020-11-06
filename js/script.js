@@ -9,6 +9,8 @@ let companyName =  `Jam3`
 
 console.log(`You will be a ${jobTitle} in ${myFutureCity}, making $${annualSalary} ($${monthlySalary} per month) for ${companyName}.`)
 
+let liEx1 = document.querySelector(`#ex1`)
+liEx1.textContent = `You will be a ${jobTitle} in ${myFutureCity}, making $${annualSalary} ($${monthlySalary} per month) for ${companyName}.`
 
 //EXERCISE 2: The Age Calculator
 //Forgot how old someone is? Calculate it! Store the current year in a variable. Store their birth year in a variable. Calculate their age based on the stored values. Output them to the screen like so: "They are NN years old.", substituting the values.
@@ -22,6 +24,8 @@ let sistersAge = currentYear - 1989
 
 console.log(`my age is ${myAge} years old, mother is ${mothersAge} years old, sister is ${sistersAge} years old.`)
 
+let liEx2 = document.querySelector(`#ex2`)
+liEx2.textContent = `my age is ${myAge} years old, mother is ${mothersAge} years old, sister is ${sistersAge} years old.`
 
 //EXERCISE 3: The Lifetime Supply Calculator
 //Ever wonder how much a "lifetime supply" of your favorite snack is? Wonder no more! Store your current age into a variable. Store a maximum age into a variable. Store an estimated amount per day (as a number). Calculate how many you would eat total for the rest of your life. Output the result to the screen like so: "You will need NN to last you until the ripe old age of X".
@@ -33,6 +37,8 @@ let amountPerDay = amountPerYear * 365
 
 console.log(`You will need ${amountPerDay} days to last you until the ripe old age of ${maximumAge} years old.` )
 
+let liEx3 = document.querySelector(`#ex3`)
+liEx3.textContent = `You will need ${amountPerDay} days to last you until the ripe old age of ${maximumAge} years old.`
 //EXERCISE 4: The Geometrizer
 //Calculate properties of a circle, using the definitions here. Store a radius into a variable. Calculate the circumference based on the radius, and output "The circumference is NN". Calculate the area based on the radius, and output "The area is NN".
 
@@ -43,7 +49,8 @@ let area = radius ** 2 * 3.141592
 console.log(`The circumference is ${circumference}cm.`)
 console.log(`The area is ${area}cm2.`)
 
-
+let liEx4 = document.querySelector(`#ex4`)
+liEx4.textContent = `The circumference is ${circumference}cm, The area is ${area}cm2.`
 //EXERCISE 5: The Temperature Converter
 //It's hot out! Let's make a converter based on the steps here. Store a celsius temperature into a variable. Convert it to fahrenheit and output "NN°C is NN°F".  Now store a fahrenheit temperature into a variable. Convert it to celsius and output "NN°F is NN°C."
 let celsiusTemperature = 18
@@ -54,43 +61,26 @@ let celsiusTemperatureNow = (fahrenheitTemperature - 32) / 1.8
 console.log(` ${celsiusTemperature} °C is ${fahrenheitTemperature} °F.`)
 console.log(` ${fahrenheitTemperatureNow} °F is ${celsiusTemperatureNow}°C.`)
 
-
-// EXERCISE 6
+let liEx5 = document.querySelector(`#ex5`)
+liEx5.textContent = ` ${celsiusTemperature} °C is ${fahrenheitTemperature} °F, ${fahrenheitTemperatureNow} °F is ${celsiusTemperatureNow}°C.`
 // Write a function named squareNumber that will take one argument (a number), square that number, and return the result. It should also log a string like "The result of squaring the number 3 is 9."
-
 function squareNumber(num) {
-   
-    return num ** 2
- }
+    return num**2
+  }
+  
+  let liEx6 = document.querySelector(`#ex6`)
+  liEx6.textContent = `The result of squaring the number 3 is ${squareNumber(3)}.`
+  
 
- let theResult = squareNumber(3)
-
-
-console.log (`The square root of the number is: ${theResult}`)
-
-//another way
-function squareNumber (num) {
-    console.log(`The square root of ${num} is: ${num ** 2}`)
-    return num  ** 2
-}
-
-let numToSq = 3
-squareNumber(numToSq)
-
-let storeTheResult = squareNumber(3)
-
-
-console.log(`When we send in ${numToSq}, we get ${squareNumber(numToSq)}`)
 
 // EXERCISE 7
 // Write a function named halfNumber that will take one argument (a number), divide it by 2, and return the result. It should also log a string like "Half of 5 is 2.5.".
-function halfNumber(num){
-    console.log (`Half of ${num} is ${num / 2}.`)
-    return num / 2
-}
-
-let numToHalf = 5
-halfNumber(numToHalf)
+function halfNumber(num) {
+    return num/2
+  }
+  
+  let liEx7 = document.querySelector(`#ex7`)
+  liEx7.textContent = `Half of 5 is ${halfNumber(5)}.`
 
 // let theHalfResult = halfNumber(5)
 // // console.log(`Half of ${numToHalf} is ${halfNumber}.)`)
@@ -101,12 +91,10 @@ halfNumber(numToHalf)
 // Write a function named percentOf that will take two numbers, figure out what percent the first number represents of the second number, and return the result. It should also log a string like "2 is 50% of 4."
 
 function percentOf(num1, num2){
-    let percent = (num1/num2) * 100
-    console.log (`${num1} is ${percent}% of ${num2}.`)
-    return percent 
+    return num1/num2 
 }
-
-percentOf (2, 4)
+let liEx8 = document.querySelector(`#ex8`)
+liEx8.textContent = `${percentOf(2,4) * 100}% of 4`
 
 
 // EXERCISE 9
@@ -114,11 +102,14 @@ percentOf (2, 4)
 //      Bonus: Round the result so there are only two digits after the decimal.
 
 
-function areaOfCircle(radius) {
-    var area = Math.PI * squareNumber(radius);
-    console.log (`The area for a circle with ${radius} is ${area}.`)
-    return area
-}
+function areaOfCircle(rad) {
+    console.log()
+    return rad ** 2 * 3.14
+  }
+  
+  let liEx9 = document.querySelector(`#ex9`)
+  liEx9.textContent = `The area for a circle with radius 2 is ${areaOfCircle(2)}.`
+  
 
 areaOfCircle(2)
 
@@ -129,15 +120,14 @@ areaOfCircle(2)
 //      3. Calculate the area of a circle with the result of #2 as the radius.   
 //      4. Calculate what percentage that area (#3) is of the squared result (#2).
 
-console.log(`All function`)
-function allFunctions(num) {
-    console.log(`percentOf`)
-
-    let half = halfNumber(num)
-    let squared = squareNumber(half)
-    let area = areaOfCircle(squared)
-    let result = percentOf (squared, area)
-    return percentOf
-}
-
-allFunctions(30)
+function runAll(num) {
+    let resultHalf = halfNumber(num)
+    let resultSqur = squareNumber(resultHalf)
+    let resultArea = areaOfCircle(resultSqur)
+    let resultPrct = percentOf(resultArea, resultSqur)
+    return resultPrct
+  }
+  
+  let liEx10 = document.querySelector(`#ex10`)
+  liEx10.textContent = `The final result is... ${runAll(4)*100}%`
+  
